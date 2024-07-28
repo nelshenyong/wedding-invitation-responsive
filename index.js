@@ -54,13 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const playIcon = "<i class='bx bx-play'></i>";
   const pauseIcon = "<i class='bx bx-pause'></i>";
 
-  // Autoplay when page loads
   audio.play();
 
-  // Update button to show pause icon
   toggleButton.innerHTML = pauseIcon;
 
-  // Toggle button event
   toggleButton.addEventListener('click', () => {
       if (audio.paused) {
           audio.play();
