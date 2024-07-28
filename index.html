@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invitation</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <audio id="background-music" loop>
+      <source src="assets/Audio/music.MP3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <nav class="navbar">
+      <a href="#cover"><i class="bx bxs-home"></i></a>
+      <a href="#couple"><i class="bx bx-male-female"></i></a>
+      <a href="#invitation" class="active"><i class="bx bx-calendar"></i></a>
+      <a href="#gift"><i class="bx bx-gift"></i></a>
+      <a href="#map"><i class="bx bx-map"></i></a>
+      <a href="#thank-you"><i class="bx bxs-chevrons-down"></i></a>
+      <button id="dark-mode-toggle"></button>
+      <button id="play-pause-toggle">
+        <i class="bx bx-play"></i>
+      </button>
+    </nav>
+
+    <header id="cover">
+      <p data-aos="fade">The wedding of</p>
+      <span class="name" data-aos="fade-down">Lovelgini & Vellali</span>
+      <p data-aos="fade-up">31.12.2025</p>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+        class="wave"
+      >
+        <path
+          fill="#f5f5dc"
+          fill-opacity="1"
+          d="M0,128L48,138.7C96,149,192,171,288,197.3C384,224,480,256,576,261.3C672,267,768,245,864,208C960,171,1056,117,1152,96C1248,75,1344,85,1392,90.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+        class="wave-dark"
+      >
+        <path
+          fill="#5e4a32"
+          fill-opacity="1"
+          d="M0,128L48,138.7C96,149,192,171,288,197.3C384,224,480,256,576,261.3C672,267,768,245,864,208C960,171,1056,117,1152,96C1248,75,1344,85,1392,90.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </header>
+
+    <section class="couple" id="couple">
+      <h1>Our Wedding</h1>
+      <div class="container" data-aos="flip-up">
+        <div class="left" data-aos="fade-up-right">
+          <div
+            class="couple-photo male"
+            data-aos="fade-right"
+            data-aos-delay="100"
+          ></div>
+          <h1 class="name">Lovelgini</h1>
+          <p class="description">Lorem</p>
+          <a href="" class="ig"><i class="bx bxl-instagram"></i></a>
+        </div>
+        <div class="mid">
+          <span>&</span>
+        </div>
+        <div class="right" data-aos="fade-up-left">
+          <div
+            class="couple-photo female"
+            data-aos="fade-left"
+            data-aos-delay="100"
+          ></div>
+          <h1 class="name">Vellali</h1>
+          <p class="description">Lorem</p>
+          <a href="" class="ig"><i class="bx bxl-instagram"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="invitation">
+      <h2>Wedding Event</h2>
+      <div id="countdown" data-aos="flip-up">
+        <div class="countdown-item" id="days" data-aos="zoom-in"></div>
+        <div class="countdown-item" id="hours" data-aos="zoom-out"></div>
+        <div class="countdown-item" id="minutes" data-aos="zoom-in"></div>
+        <div class="countdown-item" id="seconds" data-aos="zoom-out"></div>
+      </div>
+      <span>31 Desember 2025</span>
+    </section>
+
+    <section id="closing">
+      <section class="gift" id="gift">
+        <h1>Wedding Gift</h1>
+        <p>
+          Your presence is the greatest gift. However, if you wish to give us a
+          token of affection, you can do so through the feature below:
+        </p>
+        <div class="gift-container" data-aos="zoom-in-up">
+          <div
+            class="primo"
+            style="
+              width: 150px;
+              height: 150px;
+              background-image: url(assets/Images/pimogem.webp);
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              border-radius: 50%;
+            "
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1500"
+          ></div>
+          <span>Primogem</span>
+          <span
+            >UID: 850131377<input
+              type="text"
+              value="850131377"
+              id="copyUID"
+              readonly
+          /></span>
+          <button onclick="copy()">Copy</button>
+        </div>
+      </section>
+      <section class="gift" id="gift">
+        <div class="gift-container" data-aos="zoom-in-up">
+          <div
+            class="gopay"
+            style="
+              width: 100px;
+              height: 100px;
+              background-image: url(assets/Images/gopay.png);
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              border-radius: 50%;
+            "
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1500"
+          ></div>
+          <span>Gopay</span>
+          <span
+            >NO: 081273462705<input
+              type="text"
+              value="081573462705"
+              id="copyUID"
+              readonly
+          /></span>
+          <button onclick="copy()">Copy</button>
+        </div>
+      </section>
+      <section class="gift" id="gift">
+        <div class="gift-container" data-aos="zoom-in-up">
+          <div
+            class="dana"
+            style="
+              width: 100px;
+              height: 100px;
+              background-image: url(assets/Images/dana.jpeg);
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              border-radius: 50%;
+            "
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1500"
+          ></div>
+          <span>Dana</span>
+          <span
+            >NO: 081273462705<input
+              type="text"
+              value="081573462705"
+              id="copyUID"
+              readonly
+          /></span>
+          <button onclick="copy()">Copy</button>
+        </div>
+      </section>
+
+      <section class="location" id="map">
+        <h1>Wedding Location</h1>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.0048095367015!2d126.92790247591103!3d37.55495047204168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c99479bbee5f9%3A0xf55c8f78f59a2c1!2sGenshin%20Impact%20Cafe%20in%20Seoul!5e0!3m2!1sid!2sid!4v1722187235669!5m2!1sid!2sid"
+          width="400"
+          height="300"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          data-aos="flip-down"
+        ></iframe>
+      </section>
+
+      <section class="thank-you" id="thank-you">
+        <h1>Thank You</h1>
+        <p class="description">
+          "It is an honor and joy for us if you would kindly attend and give
+          your blessings. We thank you for your presence and blessings."
+        </p>
+        <p>With joy and gratitude, we invite you to share in our happiness.</p>
+        <span>Lovel & Vello</span>
+      </section>
+
+      <footer>
+        <a href="">@nelshen.yong</a>
+      </footer>
+    </section>
+
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

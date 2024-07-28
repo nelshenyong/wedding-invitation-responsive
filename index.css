@@ -1,0 +1,649 @@
+/* Custom Font */
+@font-face {
+  font-family: "AlexBrush";
+  src: url("assets/Font/AlexBrush-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "VintageGlamourItalic";
+  src: url("assets/Font/VintageGlamour-Italic.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "VintageGlamourRegular";
+  src: url("assets/Font/VintageGlamour-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Hello";
+  src: url("assets/Font/Hello.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "HelloValentina";
+  src: url("assets/Font/HelloValentina.ttf") format("truetype");
+  font-weight: normal;
+}
+
+/* Color */
+:root {
+  --primary: #f5f5dc;
+  --secondary: #deb887;
+  --bg: #a0522d;
+  --bg-dark: #5e4a32;
+  --bg-dark-sec: #8b4513;
+  --bg-sec: #d2b48c;
+  --bg-sec-dark: #cd853f;
+  --button: #8b4513;
+  --button-hover: #a0522d;
+}
+
+/* General Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: ease-in-out 0.18s;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary);
+}
+
+body > nav.navbar {
+  overflow: hidden;
+  background-color: var(--bg-sec);
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  border-radius: 30vh;
+  margin-bottom: 30px;
+  height: 35%;
+  padding: 1vh;
+  z-index: 999;
+  gap: 5px;
+  box-shadow: 0.6vh 0.6vh 0.6vh rgba(0, 0, 0, 0.5);
+}
+
+body > nav.navbar > a,
+button {
+  font-size: 2vh;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.5vh;
+  height: 3.5vh;
+  background-color: var(--button);
+  border-radius: 50%;
+}
+
+body > nav.navbar > button#play-pause-toggle {
+  border: none;
+}
+
+body > header#cover,
+section#invitation,
+section#closing {
+  width: 100%;
+  height: 100vh;
+  color: var(--primary);
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+body > header#cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(assets/Images/bg-light.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+body > header#cover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+body > header#cover span.name {
+  font-family: "AlexBrush";
+  font-size: 8vh;
+  font-weight: bold;
+  z-index: 2;
+}
+
+body > header#cover > p {
+  z-index: 3;
+}
+
+body > header#cover svg.wave {
+  z-index: 4;
+  bottom: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+body > header#cover svg.wave-dark {
+  z-index: 5;
+  display: none;
+}
+
+body > section.couple > div.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+  padding-top: 10%;
+}
+
+body > section.couple > h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-family: "Hello";
+  margin-top: 5vh;
+}
+
+body > section.couple > div.container > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+body > section.couple > div.container > div.left {
+  background-color: #c2ad92;
+  padding: 5vh;
+  border-radius: 5%;
+  -webkit-border-radius: 5%;
+  -moz-border-radius: 5%;
+  -ms-border-radius: 5%;
+  -o-border-radius: 5%;
+  box-shadow: 0.8vh 0.8vh 0.8vh rgba(0, 0, 0, 0.8);
+}
+
+body > section.couple > div.container > div.right {
+  background-color: #c2ad92;
+  padding: 5vh;
+  border-radius: 5%;
+  -webkit-border-radius: 5%;
+  -moz-border-radius: 5%;
+  -ms-border-radius: 5%;
+  -o-border-radius: 5%;
+  box-shadow: 0.8vh 0.8vh 0.8vh rgba(0, 0, 0, 0.8);
+}
+
+body > section.couple > div.container > div.mid > span {
+  font-weight: bold;
+  font-size: 5rem;
+  font-family: "AlexBrush";
+}
+
+div.male,
+div.female {
+  width: 250px;
+  height: 250px;
+  background-color: salmon;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-bottom: 3vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0.8vh 0.8vh 0.8vh rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+body > section.couple > div.container > div.left > div.male:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+body > section.couple > div.container > div.right > div.female:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+body > section.couple > div.container > div.left > div.male {
+  background-image: url(assets/Photos/male.jpg);
+}
+
+body > section.couple > div.container > div.right > div.female {
+  background-image: url(assets/Photos/female.jpg);
+}
+
+h1.name {
+  font-family: "AlexBrush";
+  font-size: 4rem;
+  color: black;
+}
+
+p.description {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  font-style: italic;
+}
+
+a.ig {
+  background-image: url(assets/Images/ig-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 5px;
+  padding-bottom: -1px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 50%;
+  font-size: 2rem;
+  margin-top: 1vh;
+  text-align: center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 3px solid white;
+  color: white;
+}
+
+body > section.couple > div.container > div.left {
+  display: flex;
+  flex-direction: column;
+}
+
+body > section#invitation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3vh;
+}
+
+body > section#invitation > h2 {
+  color: black;
+  margin-bottom: 10vh;
+  font-size: 4rem;
+  font-family: "Hello";
+}
+
+body > section#invitation > span {
+  margin-top: 5vh;
+  color: black;
+  font-family: "VintageGlamourRegular";
+}
+
+body > section#invitation > div#countdown {
+  display: flex;
+  flex-direction: row;
+  gap: 2vh;
+  background-color: rgb(251, 238, 214);
+  padding: 4vh;
+  border-radius: 2vh;
+  margin-top: -5vh;
+  box-shadow: 0.8vh 0.8vh 0.8vh rgba(0, 0, 0, 0.8);
+}
+
+body > section#invitation > div#countdown > div.countdown-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 4vh;
+  font-weight: bold;
+  font-family: "VintageGlamourRegular";
+  background-color: var(--bg-sec);
+  width: 13vh;
+  height: 15vh;
+  border-radius: 2vh;
+  box-shadow: 0.8vh 0.8vh 0.8vh rgba(0, 0, 0, 0.8);
+}
+
+body > section#closing > section.gift {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+body > section#closing > section.gift > h1 {
+  text-align: center;
+  color: black;
+  font-size: 4rem;
+  font-family: "Hello";
+  margin-top: 10vh;
+}
+
+body > section#closing > section.gift > p {
+  text-align: center;
+  color: black;
+  margin-top: 5vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 1rem;
+  margin-left: 10vh;
+  margin-right: 10vh;
+}
+
+body > section#closing > section.gift > div.gift-container {
+  background-color: #c2ad92;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40vh;
+  height: 50vh;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+  padding: 50px;
+  border-radius: 5%;
+  -webkit-border-radius: 5%;
+  -moz-border-radius: 5%;
+  -ms-border-radius: 5%;
+  -o-border-radius: 5%;
+  box-shadow: 0.8vh 0.8vh 0.8vh rgba(0, 0, 0, 0.8);
+}
+
+.gift-container input#copyUID {
+  display: none;
+}
+
+body > section#closing > section.gift > div.gift-container > span {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  font-weight: bold;
+  margin-top: 2vh;
+}
+
+body > section#closing > section.gift > div.gift-container > button {
+  padding: 15px 40px 15px 40px;
+  border-radius: 10%;
+  margin-top: 2vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  -ms-border-radius: 10%;
+  -o-border-radius: 10%;
+}
+
+body > section#closing > section.location {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+body > section#closing > section.location > h1 {
+  text-align: center;
+  color: black;
+  font-size: 4rem;
+  font-family: "Hello";
+  margin-top: 20vh;
+}
+
+body > section#closing > section.location > iframe {
+  border-radius: 3%;
+  margin-top: 5vh;
+  -webkit-border-radius: 3%;
+  -moz-border-radius: 3%;
+  -ms-border-radius: 3%;
+  -o-border-radius: 3%;
+  margin-bottom: 10vh;
+}
+
+body > section#closing > section.thank-you {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+body > section#closing > section.thank-you > h1 {
+  text-align: center;
+  color: black;
+  font-size: 4rem;
+  font-family: "Hello";
+  margin-top: 10vh;
+}
+
+body > section#closing > section.thank-you > p {
+  text-align: center;
+  margin-top: 6vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  margin-left: 10vh;
+  margin-right: 10vh;
+  color: black;
+}
+
+body > section#closing > section.thank-you > p.description {
+  font-family: 'VintageGlamourItalic';
+}
+
+body > section#closing > section.thank-you > span {
+  text-align: center;
+  font-family: 'AlexBrush';
+  font-size: 3rem;
+  margin-top: 2vh;
+  color: black;
+}
+
+body > section#closing > footer {
+  text-align: center;
+  height: 50px;
+  margin-top: 3vh;
+}
+
+body > section#closing > footer > a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.221);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.303);
+}
+
+/* Dark Mode Styles */
+#dark-mode-toggle {
+  border: none;
+  cursor: pointer;
+}
+
+body.dark-mode {
+  background-color: var(--bg-dark);
+}
+
+body > nav.navbar > button#dark-mode-toggle::after {
+  content: "\ee4e";
+  font-family: boxicons;
+}
+
+body.dark-mode > nav.navbar > button#dark-mode-toggle::after {
+  content: "\eebe";
+  font-family: boxicons;
+}
+
+body.dark-mode > nav.navbar {
+  background-color: var(--bg-sec-dark);
+  color: var(--primary);
+}
+
+body.dark-mode > nav.navbar > a,
+body.dark-mode > nav.navbar > button {
+  background-color: var(--button);
+  border-radius: 50%;
+}
+
+body.dark-mode > header#cover,
+section#invitation,
+section#closing {
+  color: var(--primary);
+}
+
+body.dark-mode > header#cover {
+  background-image: url(assets/Images/bg-dark.jpg);
+}
+
+body.dark-mode > header#cover > span.name {
+  mix-blend-mode: normal;
+}
+
+body.dark-mode > header#cover svg.wave-dark {
+  display: initial;
+  bottom: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+body.dark-mode > header#cover svg.wave {
+  display: none;
+}
+
+body.dark-mode > section.couple > h1 {
+  color: white;
+}
+
+body.dark-mode > section.couple > div.container > div.mid > span {
+  color: white;
+}
+
+body.dark-mode h1.name {
+  color: white;
+}
+
+body.dark-mode p.description {
+  color: white;
+}
+
+body.dark-mode a.ig {
+  background-color: white;
+}
+
+body.dark-mode > section#invitation > h2 {
+  color: white;
+}
+
+body.dark-mode > section#invitation > div#countdown > div.countdown-item {
+  color: white;
+}
+
+body.dark-mode > section#invitation > span {
+  color: white;
+}
+
+body.dark-mode > section#closing > section.gift > h1 {
+  color: white;
+}
+
+body.dark-mode > section#closing > section.gift > p {
+  color: white;
+}
+
+body.dark-mode > section#closing > section.gift > div.gift-container > span {
+  color: white;
+}
+
+body.dark-mode > section#closing > section.location > h1 {
+  color: white;
+}
+
+body.dark-mode > section#closing > section.thank-you > h1 {
+  color: white;
+}
+
+body.dark-mode > section#closing > section.thank-you > p {
+  color: white;
+}
+
+body.dark-mode > section#closing > section.thank-you > span {
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body > header#cover,
+  section#invitation,
+  section#closing {
+    width: 100%;
+    height: 100vh;
+  }
+
+  body > section.couple div.container {
+    flex-direction: column;
+  }
+
+  body > header#cover {
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 110vh;
+  }
+
+  body > header#cover > span.name {
+    font-size: 2.5rem;
+  }
+
+  body > nav.navbar {
+    flex-direction: row;
+    border-radius: 20vh;
+    height: 5%;
+    gap: 1vh;
+    margin: auto;
+    right: auto;
+    margin-bottom: 1vh;
+  }
+
+  body > section#invitation > div#countdown {
+    padding: 3vh;
+    gap: 2vh;
+  }
+
+  body > section#invitation > div#countdown > div.countdown-item {
+    width: 8vh;
+    height: 10vh;
+    font-size: 2.5vh;
+  }
+
+  body > section#closing > section.location > iframe {
+    width: 300px;
+    height: 200px;
+  }
+}
